@@ -1,0 +1,134 @@
+@import "../../assets/stylus/mixin.styl";
+.ratings
+  position:fixed
+  left:0
+  top: 174px
+  bottom:0
+  width: 100%
+  overflow:hidden
+  .ratingsContainer
+    width:100%
+    .scoreWrapper
+      display: flex
+      padding:18px 0
+      //border-1px(rgba(7,17,27,.2))
+      .overallScore
+        flex: 0 0 137px
+        width: 137px//兼容性问题，所以加上
+        padding:6px 0
+        @media only screen and (max-width 320px)
+          flex 0 0 110px
+          width 110px
+        border-right: 1px solid rgba(7,17,27,.2)
+        font-size 12px
+        text-align: center
+        .scores
+          font-size: 24px
+          line-height: 28px
+          color:rgb(255,153,0)
+          padding-bottom:8px
+        .title
+          color:rgb(7,17,27)
+          line-height 12px
+          padding-bottom:8px
+        .compared
+          font-size 10px
+          color: rgb(7,17,27)
+          line-height: 10px
+          padding-bottom:8px
+      .scoreItems
+        flex: 1
+        padding 6px 0 6px 24px
+        @media only screen and (max-width 320px)
+          padding-left:6px
+        .attitude,.delivery,.time
+          padding-bottom: 8px
+          line-height 18px
+          span
+            display inline-block
+            vertical-align: top
+          .item
+            font-size 12px
+            padding-right:5px
+            color: rgb(7,17,27)
+          .star
+            display inline-block
+            vertical-align: top
+            .starItem
+              margin-right 6px
+          .score
+            font-size 16px
+            color:rgb(255,153,0)
+        .time
+          .minute
+            font-weight: 700
+    .ratingsWrapper
+      .ratingsType
+        padding:10px 0 10px 20px
+      .switch
+        padding:10px 0 10px 20px
+    .ratingLists
+      padding-right:5%
+      .ratingItem
+        padding: 18px 0
+        margin-left:47px
+        position: relative
+        font-size: 12px
+        border-1px(rgba(7,17,27,.1))
+        .name
+          display:inline-block
+          padding-bottom:4px
+        .rankInfo
+          line-height 18px
+          padding-bottom: 6px
+          .star
+            display inline-block
+            vertical-align top
+            .starItem
+              margin-right: 6px
+          .deliveryTime
+            display inline-block
+            vertical-align top
+            color: rgb(147,153,159)
+            font-weight:200
+        .comment
+          line-height 18px
+        .avatar
+          display inline-block
+          position: absolute
+          left: -33px
+          top: 16px
+          width: 28px
+          height: 28px
+          border-radius 50%
+        .menuType
+          padding-top 5px
+          .iconfont, .menuItem
+            display inline-block
+            margin 0 8px 4px 0
+            font-size 9px
+          .iconfont
+            font-size: 12px
+          .icon-damuzhi
+            color: rgb(0,160,220)
+          .icon-down
+            color: rgba(7,17,27,.2)
+          .menuItem
+            padding 0 6px
+            border 1px solid rgba(7, 17, 27, 0.1)
+            border-radius 1px
+            color rgb(147, 153, 159)
+            background #fffff
+        .time
+          position absolute
+          top 18px
+          right 0
+          line-height 12px
+          font-size 10px
+          color rgb(147, 153, 159)
+    .tip
+      text-align center
+      height 48px
+      line-height 48px
+      font-size 10px
+      color: rgba(7,17,27,.6)

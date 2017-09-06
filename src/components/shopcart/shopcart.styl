@@ -1,0 +1,158 @@
+.shopCart
+  width: 100%
+  height: 48px
+  position: fixed
+  left:0
+  bottom:0
+  z-index 50
+  .contentWrapper
+    display:flex
+    justify-content: space-between
+    background: #141d27
+    color: rgba(255,255,255,0.4)
+    .contentLeft
+      flex: 1
+      font-size 0
+      .logoWrapper
+        display: inline-block
+        position: relative
+        top: -10px
+        margin: 0 12px
+        width: 56px
+        height: 56px
+        padding 6px
+        box-sizing border-box
+        border-radius 50%
+        background: #141d27
+        vertical-align:top
+        .logo
+          width:100%
+          height:100%
+          background:#2b343c
+          border-radius 50%
+          text-align: center
+          &.highlight
+            background: rgb(0, 160, 220)
+            color:white
+          .icon-gouwuche
+            font-size:24px
+            line-height 44px
+        .number
+          position: absolute
+          top:0
+          right:0
+          padding:5px 10px
+          border-radius 10px
+          background: red
+          font-size 12px
+          font-weight:700
+          box-shadow 0 4px 8px 0 rgba(0,0,0,0.4)
+      .price
+        display: inline-block
+        font-size 20px
+        font-weight: 700
+        border-right:1px solid rgba(255,255,255,0.1)
+        vertical-align:top
+        line-height 24px
+        margin-top: 12px
+        padding-right: 12px
+        &.highlight
+          color: white
+      .else
+        display inline-block
+        font-size 12px
+        font-weight:700
+        line-height 24px
+        margin-top: 12px
+        padding-left 12px
+    .contentRight
+      width: 105px
+      text-align: center
+      background: #000
+      &.enough
+        background:#00b43c
+        color:#fff
+      .condition
+        display: inline-block
+        font-size: 12px
+        height 48px
+        line-height: 48px
+
+  .ballWrapper
+    .ball
+      position fixed
+      left 32px
+      bottom 22px
+      z-index 200
+      transition: all 0.6s cubic-bezier(0.49, -0.29, 0.75, 0.41)
+      .inner
+        width 16px
+        height 16px
+        border-radius 50%
+        background rgb(0, 160, 220)
+        transition: all 0.6s linear
+        background: rgb(0,160,220)
+
+  .selectedlistsWrapper
+    position absolute
+    width: 100%
+    left 0
+    top 0
+    z-index: -1
+    transition:all 0.5s
+    background: #fff
+    transform translate3d(0,-100%,0)//固定停留位置
+    &.fold-enter-active,&.fold-leave-active
+      transform translate3d(0,-100%,0)
+    &.fold-enter,&.fold-leave-active
+      transform translate3d(0,0,0)
+    .header
+      height: 48px
+      line-height 48px
+      background:#f3f5f7
+      border-bottom 1px solid rgba(7,17,27,0.1)
+      .title
+        float: left
+        padding:0 20px
+        color rgb(7,17,27)
+      .empty
+        display inline-block
+        float: right
+        padding: 0 25px
+        color rgb(0,160,220)
+    .content
+      max-height 217px
+      overflow hidden
+      .selectedList
+        display flex
+        height 48px
+        margin 0 18px
+        border-bottom 1px solid rgba(7,17,27,0.1)
+        .name
+          flex 1
+          font-size 14px
+          color rgb(7,17,27)
+          line-height 48px
+          font-weight 700
+        .price
+          font-size 14px
+          font-weight 700
+          color rgb(240,20,20)
+          padding 0 12px 0 18px
+          line-height 48px
+        .cartcontrolWrapper
+          font-size 14px
+          margin-top 10px
+.listsMask
+  width: 100%
+  height: 100%
+  position: fixed
+  left: 0
+  top: 0
+  z-index:49
+  transition:all 0.5s
+  background: rgba(7, 17, 27, 0.6)
+&.fade-enter-active,&.fade-leave-active
+    background: rgba(7, 17, 27, 0.6)
+  &.fade-enter,&.fade-leave-active
+    background: rgba(7, 17, 27, 0)

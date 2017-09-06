@@ -1,0 +1,38 @@
+.cartControl
+  font-size 0
+  .decrease,.add
+    display inline-block
+    box-sizing border-box
+    width: 24px
+    height: 24px
+    line-height 24px
+    border-radius 50%
+    font-size 20px
+    font-weight 700
+    text-align center
+    cursor pointer
+  .decrease
+    line-height:18px
+    border:3px solid rgb(0,160,220)
+    color: rgb(0,160,220)
+    transition all 0.4s linear
+    .inner
+      transition all 0.4s linear
+    &.fadeRotate-enter-active, &.fadeRotate-leave-active//参考：http://www.cnblogs.com/qianduangaoshou/p/6917480.html
+      transform translate3d(0, 0, 0)
+      .inner
+        transform: rotate(0)
+    &.fadeRotate-enter, &.fadeRotate-leave-active
+      transform translate3d(24px, 0, 0)
+      .inner
+        transform: rotate(180deg)
+  .add
+      line-height: 24px
+      background: rgb(0,160,220)
+      color: #fff
+  .number
+     display inline-block
+     padding: 0 5px
+     font-size 12px
+     vertical-align top
+     margin-top: 7px
